@@ -140,6 +140,7 @@ class AutoHarpPlayer(QWidget):
     # 显示音乐列表
     def showMusicList(self):
         self.musicList.clear()
+        self.songs_list.clear()
         if os.path.exists(self.cur_path):
             for song in os.listdir(self.cur_path):
                 if song.split('.')[-1] in self.song_formats:
